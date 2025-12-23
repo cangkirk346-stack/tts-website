@@ -1,112 +1,25 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TTS Website - Suara Natural</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Coqui TTS Web</title>
+    <style>
+        /* CSS styling di sini */
+        body { font-family: Arial; }
+        /* ... semua kode CSS ... */
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-microphone-alt"></i> Text-to-Speech Converter</h1>
-            <p class="subtitle">Ubah teks menjadi suara natural dengan intonasi seperti manusia</p>
-        </header>
-
-        <main>
-            <div class="input-section">
-                <label for="textInput">Masukkan Teks:</label>
-                <textarea id="textInput" placeholder="Ketik atau paste teks Anda di sini... 
-Contoh: Halo! Selamat datang di website text-to-speech kami. Suara yang dihasilkan akan terdengar natural seperti manusia."></textarea>
-                
-                <div class="char-count">
-                    <span id="charCount">0</span> karakter
-                </div>
-            </div>
-
-            <div class="controls">
-                <div class="voice-controls">
-                    <div class="control-group">
-                        <label for="voiceSelect"><i class="fas fa-user"></i> Pilih Suara:</label>
-                        <select id="voiceSelect">
-                            <option value="21m00Tcm4TlvDq8ikWAM">Rachel (Wanita - Inggris)</option>
-                            <option value="pNInz6obpgDQGcFmaJgB">Adam (Pria - Inggris)</option>
-                            <option value="XB0fDUnXU5powFXDhCwa">Matilda (Wanita - Inggris)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label for="languageSelect"><i class="fas fa-globe"></i> Bahasa:</label>
-                        <select id="languageSelect">
-                            <option value="id">Indonesia</option>
-                            <option value="en">English</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="settings">
-                    <div class="slider-container">
-                        <label for="speedSlider">
-                            <i class="fas fa-tachometer-alt"></i> Kecepatan: 
-                            <span id="speedValue">1.0x</span>
-                        </label>
-                        <input type="range" id="speedSlider" min="0.5" max="1.5" step="0.1" value="1.0">
-                    </div>
-                    
-                    <div class="button-group">
-                        <button id="previewBtn" class="btn secondary">
-                            <i class="fas fa-play"></i> Preview
-                        </button>
-                        <button id="generateBtn" class="btn primary">
-                            <i class="fas fa-magic"></i> Generate Suara
-                        </button>
-                        <button id="clearBtn" class="btn danger">
-                            <i class="fas fa-trash"></i> Hapus
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="output-section">
-                <h3><i class="fas fa-volume-up"></i> Hasil Suara</h3>
-                
-                <div id="loading" class="loading" style="display: none;">
-                    <div class="spinner"></div>
-                    <p>Membuat suara... Ini butuh beberapa detik.</p>
-                </div>
-                
-                <div class="audio-container" id="audioContainer" style="display: none;">
-                    <audio id="audioPlayer" controls></audio>
-                    <button id="downloadBtn" class="btn success">
-                        <i class="fas fa-download"></i> Download MP3
-                    </button>
-                </div>
-                
-                <div id="errorMessage" class="error-message" style="display: none;">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <span id="errorText">Terjadi kesalahan. Coba lagi.</span>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <h4><i class="fas fa-info-circle"></i> Cara Menggunakan:</h4>
-                <ol>
-                    <li>Ketik atau paste teks di kotak teks</li>
-                    <li>Pilih suara dan pengaturan yang diinginkan</li>
-                    <li>Klik "Generate Suara"</li>
-                    <li>Tunggu proses selesai, lalu dengarkan hasilnya</li>
-                    <li>Download file MP3 jika ingin menyimpan</li>
-                </ol>
-            </div>
-        </main>
-
-        <footer>
-            <p>Dibuat dengan <i class="fas fa-heart"></i> menggunakan ElevenLabs API</p>
-            <p class="note">Catatan: Anda perlu menambahkan API Key untuk menggunakan fitur ini.</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- HTML content -->
+    <h1>Coqui TTS Web</h1>
+    <textarea id="textInput"></textarea>
+    <button onclick="generate()">Generate</button>
+    <audio id="player" controls></audio>
+    
+    <script>
+        // JavaScript di sini
+        async function generate() {
+            // ... semua kode JS ...
+        }
+    </script>
 </body>
 </html>
